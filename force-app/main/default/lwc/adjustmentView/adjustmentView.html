@@ -1,0 +1,43 @@
+<template>
+    <template if:true={customerSelected}>
+        <lightning-card title="Customer Adjustments" icon-name="standard:customer_360">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                <div class="slds-p-horizontal_small">
+                    <div class="carproperty">
+                        <span class="label">Name:</span>
+                        <lightning-formatted-text value={adjustment.Name}></lightning-formatted-text>
+                    </div>
+                    <div class="carproperty">
+                        <span class="label">AccountId:</span>
+                        <lightning-formatted-text value={adjustment.accountId__c}></lightning-formatted-text>
+                    </div>
+                    <div class="carproperty">
+                        <span class="label">Amount Value:</span>
+                        <lightning-slider onchange={handleSliderChange} max="10000" value={adjustment.amountValue__c}></lightning-slider>
+                    </div>
+                    <div class="carproperty">
+                        <span class="label">Currency Code:</span>
+                        <lightning-formatted-text value={adjustment.currencyCode__c}></lightning-formatted-text>
+                    </div>
+                    <div class="carproperty">
+                        <span class="label">Adjustment Status:</span>
+                        <lightning-combobox
+                                value={value}
+                                placeholder="Select Progress"
+                                options={options}
+                                onchange={handleChange} ></lightning-combobox>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+
+                <img src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" class="customer slds-align_absolute-center" alt="Customer Picture" />
+            </lightning-layout-item>
+
+
+            </lightning-layout>
+
+        </lightning-card>
+    </template>
+</template>

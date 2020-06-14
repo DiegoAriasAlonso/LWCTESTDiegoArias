@@ -1,0 +1,30 @@
+.label {
+
+    font-weight: bold;
+    display: block;
+
+    font-size: x-large;
+
+
+}
+
+
+.carproperty {
+    margin-bottom: 3px;
+
+
+
+}
+
+
+.imageview { 
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: 2px;
+}
+
+
+.customer{
+    border-radius: 5px;
+}

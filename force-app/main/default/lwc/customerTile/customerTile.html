@@ -1,0 +1,14 @@
+<template>
+  
+    <a onclick={handleViewCustomer}>
+        <div class={isContactSelected}>
+            <img src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" class="car slds-align_absolute-center" >
+            <div>
+                <p class="title slds-align_absolute-center">
+                    Customer Name: {customer.Name}<br>
+                    Account Status: {customer.accountStatus__c}
+                </p>
+            </div>
+        </div>
+    </a>
+</template>
